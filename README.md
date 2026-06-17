@@ -1,4 +1,3 @@
-
 # Sales Forecasting Using Machine Learning
 
 ## Project Overview

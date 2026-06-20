@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Forecast Dashboard</title>
+  <meta name="description" content="Interactive sales forecast visualization with beautiful UI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<header class="header">
+  <nav class="nav">
+    <a href="#" class="logo">Sales Forecast</a>
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data">Data</a></li>
+    </ul>
+  </nav>
+  <h1>Sales Forecast Dashboard</h1>
+  <p class="subtitle">Real‑time insights for your business growth</p>
+</header>
+
+  <main class="container">
+    <section class="card glass">
+      <h2>Forecast Overview</h2>
+      <canvas id="forecastChart" class="chart" width="400" height="200"></canvas>
+    </section>
+
+    <section class="card glass">
+      <h2>Monthly Data</h2>
+      <table id="forecastTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Actual Sales</th>
+            <th>Forecast</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Sales Forecasting Project</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

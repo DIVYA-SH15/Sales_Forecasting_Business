@@ -1,0 +1,121 @@
+/* styles.css – Premium design for Sales Forecasting Dashboard */
+
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  background: linear-gradient(135deg, hsl(215, 30%, 12%), hsl(215, 30%, 8%));
+  color: hsl(0, 0%, 90%);
+}
+
+/* Dark mode variables */
+:root {
+  --primary-h: 210;
+  --primary-s: 70%;
+  --primary-l: 55%;
+  --accent-h: 340;
+  --accent-s: 80%;
+  --accent-l: 65%;
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+}
+
+/* Header */
+.header {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(90deg, hsl(var(--primary-h), var(--primary-s), 45%), hsl(var(--primary-h), var(--primary-s), 55%));
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.header h1 {
+  font-weight: 800;
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+.header .subtitle {
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Container & cards */
+.container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0,0,0,0.4);
+}
+.glass {
+  background: var(--glass-bg);
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: hsl(var(--primary-h), 30%, 80%);
+}
+
+/* Chart canvas */
+.chart {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+thead {
+  background: rgba(255,255,255,0.06);
+}
+th, td {
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+}
+tr:nth-child(even) {
+  background: rgba(255,255,255,0.04);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .header h1 {font-size: 1.8rem;}
+  .container {padding: 1rem;}
+}
